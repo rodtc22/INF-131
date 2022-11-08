@@ -1,0 +1,12 @@
+package clase1binario;
+
+public class NodoArbol {
+	private Foto elem;
+	private NodoArbol izq, der;
+	
+	public NodoArbol() {
+		izq = der = null;
+	}
+	
+	
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="clase3mutipila.MultiPila"/>
+    <fullyQualifiedTypeName name="clase3MulticolaSimple.Cola"/>
+    <fullyQualifiedTypeName name="clase3MulticolaSimple.MultiCola"/>
+    <fullyQualifiedTypeName name="clase1simple.ColaCircular"/>
+    <fullyQualifiedTypeName name="clase2objeto.ColaCircular"/>
+    <fullyQualifiedTypeName name="clase2objeto.Celular"/>
+    <fullyQualifiedTypeName name="clase3multicolacircular.ColaCircular"/>
+    <fullyQualifiedTypeName name="clase3multicolacircular.MultiColaCircular"/>
+    <fullyQualifiedTypeName name="clase1simple.Persona"/>
+    <fullyQualifiedTypeName name="clase1simple.ListaSimple"/>
+    <fullyQualifiedTypeName name="clase1simple.NodoSimple"/>
+    <fullyQualifiedTypeName name="java.lang.LinkageError"/>
+    <fullyQualifiedTypeName name="clase2dobles.ListaDoble"/>
+    <fullyQualifiedTypeName name="clase2dobles.NodoDoble"/>
+    <fullyQualifiedTypeName name="clase1simple.NodoS"/>
+    <fullyQualifiedTypeName name="clase1simple.LCSimple"/>
+    <fullyQualifiedTypeName name="clase2dobles.NodoD"/>
+    <fullyQualifiedTypeName name="clase2dobles.LCDoble"/>
+    <fullyQualifiedTypeName name="clase1binario.Foto"/>
+    <fullyQualifiedTypeName name="clase1binario.ArbolBinario"/>
+    <fullyQualifiedTypeName name="clase1binario.Cola"/>
+    <fullyQualifiedTypeName name="clase1binario.NodoArbol"/>
+    <fullyQualifiedTypeName name="clase2binariobusqueda.ABBusqueda"/>
+    <fullyQualifiedTypeName name="clase2binariobusqueda.NodoABB"/>
+</qualifiedTypeNameHistroy>

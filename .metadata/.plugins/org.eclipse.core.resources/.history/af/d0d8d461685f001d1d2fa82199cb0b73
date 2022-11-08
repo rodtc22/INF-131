@@ -1,0 +1,52 @@
+package clase1binario;
+
+import java.util.Scanner;
+
+public class ArbolBinario {
+	private NodoArbol r;
+	private static int id = 0;
+	
+	public ArbolBinario () {
+		r = null;
+	}
+	
+	public void crear(NodoArbol x) {
+		Scanner sc = new Scanner(System.in);
+		int cur = id;
+		
+		Foto e = new Foto("cole" + cur, cur);
+		x.setElem(e);
+		
+		System.out.print(cur + " Tiene hijo izq s/n: ");
+		String op = sc.next();
+		if (op.equals("s")) {
+			x.setIzq(new NodoArbol());
+			crear(x.getIzq());
+		}
+		
+		System.out.print(cur + " Tiene hijo der s/n: ");
+		op = sc.next();
+		if (op.equals("s")) {
+			x.setDer(new NodoArbol());
+			crear(x.getDer());
+		}
+	}
+
+	public NodoArbol getR() {
+		return r;
+	}
+
+	public void setR(NodoArbol r) {
+		this.r = r;
+	}
+
+	public void inorden(NodoArbol x) {
+		if (x != null) {
+			inorden(x.getIzq());
+			System.out.println(x.getElem());
+			inorden(x.getDer());
+		}
+	}
+	
+	
+}

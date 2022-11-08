@@ -1,0 +1,101 @@
+package clase1simple;
+
+public class ListaSimple { // solo trabaja con nodos, por eso adi nodos, y devuelve nodos
+	
+	private NodoSimple p;
+	
+	public ListaSimple() {
+		p = null;
+	}
+
+	public NodoSimple getP() {
+		return p;
+	}
+
+	public void setP(NodoSimple p) {
+		this.p = p;
+	}
+	
+	public boolean esVacia() { return p == null; }
+	
+	public int nroElem() {
+		int cnt = 0;
+		
+		NodoSimple r = p;
+		while (r != null) {
+			cnt++;
+			r = r.getSig();
+		}
+		
+		return cnt;
+	}
+	
+	public void adiFin (NodoSimple x) {
+		if (p == null) {
+			p = x;
+		} else {
+			NodoSimple r = p;
+			while (r.getSig() != null) {
+				r = r.getSig();
+			}
+			r.setSig(x);
+		}
+	}
+	
+	public void adiIni (NodoSimple x) {
+		if (p == null) {
+			p = x;
+		} else {
+			x.setSig(p);
+			p = x;
+		}
+	}
+	
+	public NodoSimple eliFin () {
+		NodoSimple x = new NodoSimple();
+		if (p == null) {
+			System.out.println("ListaSimple vacia!");
+		} else {
+			NodoSimple r = p;
+			NodoSimple q = p;
+			while (r.getSig() != null) {
+				q = r;
+				r = r.getSig();
+			}
+			
+			x = r;
+			q.setSig(null);
+		}
+		return x;
+	}
+	
+	public NodoSimple eliIni() {
+		NodoSimple x = new NodoSimple();
+		
+		if (p == null) {
+			System.out.println("Lista simple vacia!");
+		} else {
+			x = p;
+			p = p.getSig();
+		}
+			
+		return x;
+	}
+	
+	public void llenar (int n) {
+		for (int i = 0 ;i < n; i++) {
+			NodoSimple x = new NodoSimple();
+			x.setElem(new Persona("rodri"+i, i ));
+			adiFin(x);
+		}
+	}
+	
+	public void mostrar () {
+		NodoSimple r = p;
+		while (r!= null) {
+			System.out.println(r.getElem());
+			r = r.getSig();
+		} System.out.println();
+	}
+	
+}

@@ -1,0 +1,77 @@
+package clase2binariobusqueda;
+
+public class ABBusqueda {
+	private NodoABB r;
+	
+	public ABBusqueda () {
+		r = null;
+	}
+	
+	public boolean esVacia () {
+		return r == null;
+	}
+	
+	public void cargar (Persona e) {
+		NodoABB x = new NodoABB();
+		x.setElem(e);
+		
+		if (r == null) {
+			r = new NodoABB();
+			r.setElem(e);
+		} else {
+			NodoABB p = r;
+			int a = e.getCi(), b;
+			boolean sw = true;
+			
+			while (sw) {
+				b = p.getElem().getCi();
+				if (a == b) {
+					System.out.println("Elemento repetido!");
+					sw = false;
+				} else if (a < b) {
+					if (p.getIzq() == null) {
+						p.setIzq(new NodoABB());
+						p.getIzq().setElem(e);
+						sw = false;
+					} else {
+						p = p.getIzq();
+					} 
+				} else {
+					if (p.getDer() == null) {
+						p.setDer(new NodoABB());
+						p.getDer().setElem(e);
+						sw = false;
+					} else {
+						p = p.getDer();
+					}
+				}
+			}
+		}
+	}
+	
+	public void preorden (NodoABB x) {
+		if ( x != null ) {
+			preorden(x.getIzq());
+			System.out.println(x.getElem());
+			preorden(x.getDer());
+		}
+	}
+	
+	public void llenar (int n ) {
+		for (int i = 0 ;i < n; i++) {
+			int ran = (int)(Math.random() * 100);
+			Persona x = new Persona("rod"+ran, ran);
+			cargar(x);
+		}
+	}
+
+	public NodoABB getR() {
+		return r;
+	}
+
+	public void setR(NodoABB r) {
+		this.r = r;
+	}
+	
+	
+}

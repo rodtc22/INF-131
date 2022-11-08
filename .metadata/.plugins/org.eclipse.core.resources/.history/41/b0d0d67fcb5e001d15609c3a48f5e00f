@@ -1,0 +1,19 @@
+package clase1simple;
+
+public class principal {
+
+	public static void main(String[] args) {
+		// LISTA CIRCULAR SIMPLE
+		LCSimple lcs = new LCSimple();
+		lcs.llenar(5);
+		lcs.mostrar();
+		
+		lcs.eliIni();
+		lcs.eliFin();
+		lcs.mostrar();
+		
+		
+		
+	}
+
+}

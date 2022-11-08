@@ -1,0 +1,22 @@
+package clase0stack;
+
+import java.util.Stack; //importamos esto
+
+public class principal {
+
+	public static void main(String[] args) {
+		// Usaremos la libreria stack
+		Stack<Integer> st = new Stack<>();
+		
+		for (int i = 0 ;i < 5 ;i++) 
+			st.add(i);
+		
+		System.out.println(st);// por si acaso xd
+		
+		System.out.println(st.peek()); //top
+		
+		st.pop();
+		System.out.println(st);
+	}
+
+}

@@ -1,0 +1,51 @@
+package clase3MulticolaSimple;
+
+public class MultiCola {
+	private int inic, finc, maxc = 100;
+	private Cola v[] = new Cola[maxc];
+	
+	public MultiCola () {
+		inic = finc = 0;
+	}
+	
+	public boolean esVacia() { return inic == finc; }
+	public boolean esLlena() { return finc == maxc; }
+	public int nroElem() { return finc - inic; }
+	
+	public void adicionar (Cola x) {
+		if (!esLlena()) v[finc++] = x;
+		else System.out.println("Cola Llena!");
+	}
+	
+	public Cola eliminar () {
+		Cola x = new Cola();
+		if (!esVacia()) x = v[inic++];
+		else System.out.println("Cola Vacia!");
+		return x;
+	}
+	
+	public void vaciar (MultiCola c) {
+		while (!c.esVacia()) 
+			adicionar(c.eliminar());
+	}
+	
+	public void llenar (int n) {
+		for (int i =1 ;i <= n; i++) {
+			Cola c = new Cola();
+			c.llenar(i);
+			adicionar(c);
+		}
+	}
+	
+	public void mostrar () {
+		MultiCola aux = new MultiCola();
+		
+		while (!esVacia()) {
+			Cola x = eliminar();
+			x.mostrar();
+			aux.adicionar(x);
+		}System.out.println();
+		
+		this.vaciar(aux);
+	}
+}

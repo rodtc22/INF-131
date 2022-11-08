@@ -1,0 +1,28 @@
+package clase2binariobusqueda;
+
+public class ABBusqueda {
+	private NodoABB r;
+	
+	public ABBusqueda () {
+		r = null;
+	}
+	
+	public boolean esVacia () {
+		return r == null;
+	}
+	
+	public void cargar (Persona e) {
+		if (r == null) {
+			r = new NodoABB();
+			r.setElem(e);
+		} else {
+			NodoABB x = r;
+			
+			if (x.getElem().getCi() > e.getCi()) {
+				
+			} else {
+				
+			}
+		}
+	}
+}

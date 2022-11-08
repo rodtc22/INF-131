@@ -1,0 +1,76 @@
+package clase1binario;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class ArbolBinario throws FileNotFoundException {
+	private NodoArbol r;
+	private static int id = 0;
+	final Scanner sc = new Scanner(new File("in.txt"));
+	
+	public ArbolBinario () {
+		r = null;
+	}
+	
+	public void crear(NodoArbol x) {
+//		Scanner sc = new Scanner(System.in);
+		
+		int cur = id;
+		
+		Foto e = new Foto("cole" + cur, cur);
+		x.setElem(e);
+		
+		System.out.print(cur + " Tiene hijo izq s/n: ");
+		String op = sc.next();
+		if (op.equals("s")) {
+			id++;
+			x.setIzq(new NodoArbol());
+			crear(x.getIzq());
+		}
+		
+		System.out.print(cur + " Tiene hijo der s/n: ");
+		op = sc.next();
+		if (op.equals("s")) {
+			id++;
+			x.setDer(new NodoArbol());
+			crear(x.getDer());
+		}
+	}
+	
+	public void preorden(NodoArbol x) {
+		if (x != null) {
+			System.out.println(x.getElem());
+			preorden(x.getIzq());
+			preorden(x.getDer());
+		}
+	}
+	
+	public void inorden(NodoArbol x) {
+		if (x != null) {
+			inorden(x.getIzq());
+			System.out.println(x.getElem());
+			inorden(x.getDer());
+		}
+	}
+	
+	public void postorden(NodoArbol x) {
+		if (x != null) {
+			postorden(x.getIzq());
+			postorden(x.getDer());
+			System.out.println(x.getElem());
+		}
+	}	
+
+	public NodoArbol getR() {
+		return r;
+	}
+
+	public void setR(NodoArbol r) {
+		this.r = r;
+	}
+
+	
+	
+	
+}

@@ -1,0 +1,19 @@
+package clase1ColaSimple;
+
+public class principal {
+
+	public static void main(String[] args) {
+		// COLA SIMPLE
+		
+		Cola c = new Cola();
+		c.adicionar(2);
+		c.adicionar(4);
+//		c.llenar(6);
+//		c.adicionar(41545);
+//		c.mostrar();
+//		int x = c.eliminar();
+//		System.out.println(x);
+		c.mostrar();
+	}
+
+}

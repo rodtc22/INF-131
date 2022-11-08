@@ -1,0 +1,34 @@
+package clase1binario;
+
+public class ArbolBinario {
+	private NodoArbol r;
+	
+	public ArbolBinario() {
+		r = null;
+	}
+	
+	public boolean esVacia () {
+		return r == null;
+	}
+	
+	public void crear (NodoArbol x) { // se supone que ya te llega un nodo valido
+		int rand = (int)(Math.random() * 5);
+		Foto e = new Foto("foto"+rand, rand);
+		
+		x.setElem(e);
+		
+		System.out.print("Tiene hijo Izq: s/n");
+		Scanner sc = new Scanner(System.in);
+		char c = 
+	}
+	
+	public NodoArbol getR() {
+		return r;
+	}
+
+	public void setR(NodoArbol r) {
+		this.r = r;
+	}
+	
+	
+}

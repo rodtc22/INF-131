@@ -1,0 +1,20 @@
+package clase1simple;
+
+public class ListaSimple {
+	
+	private NodoSimple p;
+	
+	public ListaSimple() {
+		p = null;
+	}
+
+	public NodoSimple getP() {
+		return p;
+	}
+
+	public void setP(NodoSimple p) {
+		this.p = p;
+	}
+	
+	
+}

@@ -1,0 +1,9 @@
+package clase2binariobusqueda;
+
+public class principal {
+	public static void main (String [] args) {
+		
+	}
+}
+
+

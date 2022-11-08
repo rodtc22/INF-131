@@ -1,0 +1,55 @@
+package clase2dobles;
+
+public class LCDoble {
+	
+	private NodoD p;
+	
+	public LCDoble() {
+		p = null;
+	}
+	
+	public boolean esVacia() {
+		return p == null;
+	}
+	
+	public int nroElem () {
+		int cnt = 0;
+		if (!esVacia()) {
+			NodoD r = p;
+			cnt = 1;
+			while (r.getSig() != p) {
+				cnt++;
+				r = r.getSig();
+			}
+		}
+		return cnt;
+	}
+	
+	public void adiIni (Premio e) {
+		NodoD x = new NodoD();
+		x.setElem(e);
+		x.setSig(x); x.setAnt(x);
+		
+		if (esVacia()) {
+			p = x;
+		} else {
+			NodoD ult = p.getAnt();
+			ult.setSig(x);
+			x.setAnt(ult);
+			x.setSig(p);
+			p.setAnt(x);
+			p = x;
+		}
+	}
+
+	public NodoD getP() {
+		return p;
+	}
+
+	public void setP(NodoD p) {
+		this.p = p;
+	}
+	
+	
+	
+}

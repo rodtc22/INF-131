@@ -1,0 +1,31 @@
+package clase1binario;
+
+import java.util.Scanner;
+
+public class ArbolBinario {
+	private NodoArbol r;
+	private static int id = 0;
+	
+	public ArbolBinario () {
+		r = null;
+	}
+	
+	public void crear(NodoArbol x) {
+		Scanner sc = new Scanner(System.in);
+		int cur = id;
+		
+		Foto e = new Foto("cole" + cur, cur);
+		x.setElem(e);
+		
+	}
+
+	public NodoArbol getR() {
+		return r;
+	}
+
+	public void setR(NodoArbol r) {
+		this.r = r;
+	}
+	
+	
+}

@@ -1,0 +1,16 @@
+package clase3mutipila;
+
+public class principal {
+
+	public static void main(String[] args) {
+//		Pila p =new Pila ();
+//		p.llenar(4);
+//		p.llenar(2);
+//		
+//		p.mostrar();
+		
+		
+
+	}
+
+}

@@ -1,0 +1,62 @@
+package clase2binariobusqueda;
+
+public class ABBusqueda {
+	private NodoABB r;
+	
+	public ABBusqueda () {
+		r = null;
+	}
+	
+	public boolean esVacia () {
+		return r == null;
+	}
+	
+	public void cargar (Persona e) {
+		NodoABB x = r;
+		
+		while (x != null) {					
+			if (x.getElem().getCi() == e.getCi()) {
+				System.out.println("El elemento ya existia");
+				break;
+			} else if (x.getElem().getCi() > e.getCi()) {
+				x = x.getIzq();
+			} else {
+				x = x.getDer();
+			}
+		}
+		
+		if (r == null) {
+			r = new NodoABB();
+			r.setElem(e);
+		} else {			
+			x = new NodoABB();
+			x.setElem(e);		
+		}
+	}
+	
+	public void preorden (NodoABB x) {
+		if ( x != null ) {
+			preorden(x.getIzq());
+			System.out.println(x.getElem());
+			preorden(x.getDer());
+		}
+	}
+	
+	public void llenar (int n ) {
+		for (int i = 0 ;i < n; i++) {
+			int ran = (int)(Math.random() * 100);
+			Persona x = new Persona("rod"+ran, ran);
+			cargar(x);
+		}
+	}
+
+	public NodoABB getR() {
+		return r;
+	}
+
+	public void setR(NodoABB r) {
+		this.r = r;
+	}
+	
+	
+}

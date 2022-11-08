@@ -1,0 +1,15 @@
+package clase2ColaSimpleObj;
+
+public class principal {
+
+	public static void main(String[] args) {
+		// COLA SIMPLE DE OBJETOS
+		Cola c = new Cola();
+		c.llenar(5);
+		c.mostrar();
+		
+		c.adicionar(new Animal("asdf", 123));
+		c.mostrar();
+	}
+
+}

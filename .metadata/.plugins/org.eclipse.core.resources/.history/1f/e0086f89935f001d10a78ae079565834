@@ -1,0 +1,11 @@
+package clase2binariobusqueda;
+
+public class principal {
+	public static void main (String [] args) {
+		ABBusqueda abb = new ABBusqueda();
+		abb.llenar(6);
+		abb.preorden(abb.getR());
+	}
+}
+
+

@@ -1,0 +1,13 @@
+package clase1binario;
+
+public class principal {
+	public static void main (String [] args) {
+		// ARBOL BINARIO SIMPLE
+		ArbolBinario ab = new ArbolBinario();
+		NodoArbol na = new NodoArbol();
+		ab.setR(na);
+		
+		ab.crear(na);
+		ab.inorden(ab.getR());
+	}
+}

@@ -1,0 +1,21 @@
+package clase1binario;
+
+public class ArbolBinario {
+	private NodoArbol r;
+	
+	public ArbolBinario () {
+		r = null;
+	}
+	
+	
+
+	public NodoArbol getR() {
+		return r;
+	}
+
+	public void setR(NodoArbol r) {
+		this.r = r;
+	}
+	
+	
+}
